@@ -3,19 +3,20 @@ package br.ufrn.bd.Produto;
 public class Produto {
 
 	private String descricao;	
-	private long quant, numero, valor, codigo;
+	private long quant, numero, valor, codigo, osID;
 	
 	public Produto(){
 		
 	}
 	
 	public Produto(String descricao, long quant, long numero, long valor,
-			long codigo) {
+			long codigo, long osID) {
 		this.descricao = descricao;
 		this.quant = quant;
 		this.numero = numero;
 		this.valor = valor;
 		this.codigo = codigo;
+		this.osID = osID;
 	}
 	
 	public String getDescricao() {
@@ -49,6 +50,14 @@ public class Produto {
 		this.codigo = codigo;
 	}
 	
+	public long getOsID() {
+		return osID;
+	}
+
+	public void setOsID(long osID) {
+		this.osID = osID;
+	}
+
 	public String toString() {
 		return descricao + "\n" +
 			   "Código: " + codigo + "\n" +

@@ -12,6 +12,7 @@ public class ProdutoContract {
 		public static final String COLUMN_NUMERO = "numero";
 		public static final String COLUMN_VALOR = "valor";
 		public static final String COLUMN_CODIGO = "codigo";
+		public static final String COLUMN_OS_ID = "os_id";
 	}
 
 }
