@@ -8,6 +8,14 @@ import br.ufrn.bd.Produto.ProdutoContract.ProdutoEntry;
 
 public class ProdutoBDHelper extends SQLiteOpenHelper {
 
+	public static final int DATABASE_VERSION = 1;
+	public static final String DATABASE_NAME = "sistema_mobile.db";
+	
+	private static final String TEXT_TYPE = " TEXT";
+	private static final String INTEGER_TYPE = " INTEGER";
+	
+	private static final String COMMA_SEP = ",";
+	
 	public ProdutoBDHelper(Context context, String name, CursorFactory factory,
 			int version) {
 		super(context, name, factory, version);
@@ -19,19 +27,14 @@ public class ProdutoBDHelper extends SQLiteOpenHelper {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
 
-	public static final int DATABASE_VERSION = 1;
-	public static final String DATABASE_NAME = "sistema_mobile.db";
-	
-	private static final String TEXT_TYPE = " TEXT";
-	private static final String INTEGER_TYPE = " INTEGER";
-	private static final String COMMA_SEP = ",";
 	
 	private static final String SQL_CREATE_ENTRIES = "CREATE TABLE " + ProdutoEntry.TABLE_PRODUTO + " ( " +
-						ProdutoEntry.COLUMN_CODIGO + " " + INTEGER_TYPE +  " PRIMARY KEY " + COMMA_SEP +
+								 ProdutoEntry.COLUMN_CODIGO + " " + INTEGER_TYPE +  " PRIMARY KEY " + COMMA_SEP +
+								 ProdutoEntry.COLUMN_OS_ID  + " " + INTEGER_TYPE +  COMMA_SEP +
 								 ProdutoEntry.COLUMN_QUANTIDADE + " " + INTEGER_TYPE + COMMA_SEP + 
 								 ProdutoEntry.COLUMN_NUMERO + " " + INTEGER_TYPE + COMMA_SEP + 
 								 ProdutoEntry.COLUMN_VALOR + " " + INTEGER_TYPE + COMMA_SEP + 
-								 ProdutoEntry.COLUMN_DESCRICAO + " " + TEXT_TYPE + COMMA_SEP + " )";
+								 ProdutoEntry.COLUMN_DESCRICAO + " " + TEXT_TYPE + " )";
 								  
 
 	private static final String SQL_DELETE_ENTRIES =
