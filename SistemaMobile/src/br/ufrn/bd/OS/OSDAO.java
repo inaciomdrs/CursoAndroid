@@ -78,11 +78,12 @@ public class OSDAO {
 		return Ordens;
 	}
 	
-	public List<OS> buscar(String campo, String valor){
+	public List<OS> buscar(String valor){
 		String[] results = {OSEntry.COLUMN_OS_ID, OSEntry.COLUMN_NOME_CLIENTE,OSEntry.COLUMN_STATUS}; 
 		
-		Cursor cursor = db.query(OSEntry.TABLE_OS,results,campo + " = " + valor, 
-				null, null, null, null);
+		Cursor cursor = db.query(OSEntry.TABLE_OS,results,OSEntry.COLUMN_OS_ID + " = " + valor + " OR " + 
+									OSEntry.COLUMN_NOME_CLIENTE + " LIKE %" + valor + "%", 
+								 null, null, null, null);
 		cursor.moveToFirst();
 		
 		ArrayList<OS> ordens = new ArrayList<OS>(); 
