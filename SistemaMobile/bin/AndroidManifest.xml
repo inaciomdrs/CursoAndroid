@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +15,13 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="br.ufrn.sistemamobile.MainActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main"
+             >
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
