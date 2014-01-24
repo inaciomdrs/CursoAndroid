@@ -79,11 +79,16 @@ public class OSDAO {
 	}
 	
 	public List<OS> buscar(String valor){
+		
+		if(valor.equals("")){
+			return listarTodos();
+		}
+		
 		String[] results = {OSEntry.COLUMN_OS_ID, OSEntry.COLUMN_NOME_CLIENTE,OSEntry.COLUMN_STATUS}; 
 		
 		Cursor cursor = db.query(OSEntry.TABLE_OS,results,OSEntry.COLUMN_OS_ID + " = " + valor + " OR " + 
 									OSEntry.COLUMN_NOME_CLIENTE + " LIKE %" + valor + "%", 
-								 null, null, null, null);
+								 null, null, null, OSEntry.COLUMN_STATUS + " AND " + OSEntry.COLUMN_NOME_CLIENTE);
 		cursor.moveToFirst();
 		
 		ArrayList<OS> ordens = new ArrayList<OS>(); 
@@ -98,6 +103,14 @@ public class OSDAO {
 		cursor.close();
 		
 		return ordens;
+	}
+	
+	public void atualizarStatus(OS os, String novoStatus){
+		ContentValues values = new ContentValues();
+		
+		values.put(OSEntry.COLUMN_STATUS, novoStatus);
+		
+		db.update(OSEntry.TABLE_OS, values, OSEntry.COLUMN_OS_ID + " = " + os.getOsID(), null);		
 	}
 	
 	public OS cursorToOS(Cursor cursor){

@@ -7,10 +7,18 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+<<<<<<< HEAD
 import android.view.View;
 
 public class MainActivity extends Activity {
 
+=======
+import android.widget.Button;
+
+public class MainActivity extends Activity {
+
+	Button b = new Button(this);
+>>>>>>> 23d4f664f2fe3a655ae8f2611c5314e4d86a6e5e
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
