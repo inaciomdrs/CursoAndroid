@@ -7,5 +7,15 @@
     <string name="hello_world">Bem Vindo!</string>
     <string name="Visualizar_OS">BUSCAR OS</string>
     <string name="Cadatrar_OS">CADASTRAR OS</string>
+    <string name="title_activity_busca">BuscaActivity</string>
+    <string name="texto_busca">Pesquisa:</string>
+    <string name="title_activity_cadastro">ABERTURA DE OS</string>
+    <string name="Cad_OS_NameClient">NOME DO CLIENTE:</string>
+    <string name="Cad_OS_END_FINAL">ENDEREÇO PARA ENTREGA:</string>
+    <string name="Cad_OS_END_START">ENDEREÇO DE ENTRADA:</string>
+    <string name="Cad_OS_OBS">OBSERVAÇÃO:</string>
+    <string name="Cad_OS_STATUS">STATUS:</string>
+    <string name="Cad_OS_NUMBER">NUMERO DA OS:</string>
+    <string name="Ic_main">TRANSPORTADORA LÊRÊ</string>
 
 </resources>
