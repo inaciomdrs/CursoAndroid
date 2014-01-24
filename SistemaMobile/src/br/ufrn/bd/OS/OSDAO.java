@@ -52,6 +52,8 @@ public class OSDAO {
 		
 		cursor.close();
 		
+		System.out.println("OS Cadastrada com sucesso!");
+		
 		return ordem;
 		
 	}
@@ -86,8 +88,7 @@ public class OSDAO {
 		
 		String[] results = {OSEntry.COLUMN_OS_ID, OSEntry.COLUMN_NOME_CLIENTE,OSEntry.COLUMN_STATUS}; 
 		
-		Cursor cursor = db.query(OSEntry.TABLE_OS,results,OSEntry.COLUMN_OS_ID + " = " + valor + " OR " + 
-									OSEntry.COLUMN_NOME_CLIENTE + " LIKE %" + valor + "%", 
+		Cursor cursor = db.query(OSEntry.TABLE_OS,results,OSEntry.COLUMN_NOME_CLIENTE + " LIKE '%" + valor + "%'", 
 								 null, null, null, OSEntry.COLUMN_STATUS + " AND " + OSEntry.COLUMN_NOME_CLIENTE);
 		cursor.moveToFirst();
 		
@@ -117,10 +118,7 @@ public class OSDAO {
 		OS os = new OS();
 		os.setOsID(cursor.getLong(0));
 		os.setNomeCliente(cursor.getString(1));
-		os.setEnderecoEntrega(cursor.getString(2));
-		os.setEnderecoColeta(cursor.getString(3));
-		os.setObservacao(cursor.getString(4));
-		os.setStatus(cursor.getString(5));
+		os.setStatus(cursor.getString(2));
 		return os;
 	}
 

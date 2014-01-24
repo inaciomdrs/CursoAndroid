@@ -23,11 +23,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="br.ufrn.example.sistemamobile.BuscaActivity"
+            android:name="br.ufrn.sistemamobile.BuscaActivity"
             android:label="@string/title_activity_busca" >
         </activity>
         <activity
-            android:name="br.ufrn.example.sistemamobile.CadastroActivity"
+            android:name="br.ufrn.sistemamobile.CadastroActivity"
             android:label="@string/title_activity_cadastro" >
         </activity>
     </application>

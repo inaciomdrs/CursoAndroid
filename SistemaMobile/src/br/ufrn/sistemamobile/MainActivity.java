@@ -1,7 +1,5 @@
 package br.ufrn.sistemamobile;
 
-import br.ufrn.example.sistemamobile.BuscaActivity;
-import br.ufrn.example.sistemamobile.CadastroActivity;
 import br.ufrn.example.sistemamobile.R;
 import android.os.Bundle;
 import android.app.Activity;

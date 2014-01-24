@@ -1,5 +1,6 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -7,76 +8,135 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".CadastroActivity" >
-    
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Cad_OS_NameClient" />
+        
+        <EditText 
+            android:id="@+id/nomeCli"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:inputType="text" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Cad_OS_END_START" />
+        
+        <EditText
+            android:id="@+id/endSt" 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:inputType="text" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Cad_OS_END_FINAL" />
+        
+        <EditText 
+            android:id="@+id/endFi"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:inputType="text" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Cad_OS_STATUS" />
+        
+        <EditText
+            android:id="@+id/status" 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:inputType="text" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Cad_OS_OBS" />
+        
+        <EditText 
+            android:id="@+id/obs"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:inputType="text" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Cad_OS_NUMBER" />
+        
+        <EditText 
+            android:id="@+id/numero"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:inputType="number" />
+        
+    </LinearLayout>
     
     <LinearLayout
         android:layout_width="fill_parent"
-    	android:layout_height="wrap_content" >
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
         
-        <TextView 
+        <Button
+            android:id="@+id/button1"
             android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-            android:text="@string/Cad_OS_NUMBER"/>
-    
-    </LinearLayout>
-    
-    
-    <LinearLayout 
-        android:layout_width="fill_parent"
-    	android:layout_height="wrap_content">
+            android:layout_height="fill_parent"
+            android:text="@string/Cadatrar_OS"
+            android:onClick="cadastrarOS" />
         
-        <TextView 
-        	android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-    		android:text="@string/Cad_OS_NameClient"/>
-        
-    </LinearLayout>
-    
-    
-    <LinearLayout 
-        android:layout_width="fill_parent"
-    	android:layout_height="wrap_content">
-        
-        <TextView 
-        	android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-    		android:text="@string/Cad_OS_END_START"/>
-    </LinearLayout>
-    	
-    
-    <LinearLayout android:layout_width="fill_parent"
-    	android:layout_height="wrap_content">
-       
-       <TextView 
-        	android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-    		android:text="@string/Cad_OS_END_FINAL"/>
-    </LinearLayout>
-    
-    
-    <LinearLayout 
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-    	android:layout_height="wrap_content">
-       
-        <TextView 
-        	android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-    		android:text="@string/Cad_OS_STATUS"/>
-    </LinearLayout>
-    
-    
-    <LinearLayout 
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-    	android:layout_height="wrap_content">
-        
-        <TextView 
-        	android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-    		android:text="@string/Cad_OS_OBS"/>
     </LinearLayout>
 
-
-
-</RelativeLayout>
+</LinearLayout>
