@@ -1,0 +1,5 @@
+A - Em aberto
+B - Produtos coletados
+C - Voltar para o seguro
+D - Finalizado
+X - Produto faltando
